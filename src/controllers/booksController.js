@@ -14,7 +14,7 @@ class BooksController {
     static async searchById(req, res) {
         try {
           const id = req.params.id;
-          const book = books.findById(id);
+          const book = await Books.findById(id);
           res.status(200).json(book);
         } catch (error) {
             res.status(500).json({ message: `[ Error ] Falha ao buscar livro: ${error.message}` });
