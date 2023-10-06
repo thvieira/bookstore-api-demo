@@ -20,7 +20,7 @@ class Books {
     static async insert(bookData) {
         bookData.id = uuidv4();
         await db.read();
-        db.data.books.push(bookData)
+        db.data.books.push(bookData);
         await db.write();
         return bookData;
     }
@@ -33,6 +33,22 @@ class Books {
     static async findById(bookId) {
         await db.read();
         return db.data.books.filter( (book) => book.id == bookId );
+    }
+
+    static async findByIdAndUpdate(bookId, bookData) {
+        await db.read();
+        for(const book of db.data.books) {
+            if(book.id == bookId) {
+                if(bookData.title) book.title = bookData.title;
+                if(bookData.author) book.author = bookData.author;
+                if(bookData.publisher) book.publisher = bookData.publisher;
+                if(bookData.price) book.price = bookData.price;
+                if(bookData.stock) book.stock = bookData.stock;
+
+                await db.write();
+                return book;
+            }
+        }
     }
 
     static async findByIdAndDelete(bookId) {

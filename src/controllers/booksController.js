@@ -32,8 +32,13 @@ class BooksController {
 
     static async updateBook(req, res) {
         try {
-             const updatedBook = await books.findByIdAndUpdate(req.params.id, req.body);
-            res.status(200).json({ updatedBook });
+            const book = await Books.findById(req.params.id);
+            if( book.length === 0 ) {
+                res.status(404).json({ message: "Book not found." });
+            } else {
+                const updatedBook = await Books.findByIdAndUpdate(req.params.id, req.body);
+                res.status(200).json({ updatedBook });
+            }
         } catch (error) {
             res.status(500).json({ message: `[ Error ] Falha ao editar livro: ${error.message}` });
         }
