@@ -1,13 +1,13 @@
-import books from "../models/books.js";
+import Books from "../models/books.js";
 
 class BooksController {
 
     static async listAll(req, res) {
         try {
-            const booksList = await books.find();
+            const booksList = await Books.find();
             res.status(200).json(booksList);
         } catch (error) {
-            res.status(500).json({ message: `[ Error ] Falha ao listar livros: ${erro.message}` });
+            res.status(500).json({ message: `[ Error ] Falha ao listar livros: ${error.message}` });
         }
     };
 
@@ -16,17 +16,17 @@ class BooksController {
           const id = req.params.id;
           const book = books.findById(id);
           res.status(200).json(book);
-        } catch (erro) {
-            res.status(500).json({ message: `[ Error ] Falha ao buscar livro: ${erro.message}` });
+        } catch (error) {
+            res.status(500).json({ message: `[ Error ] Falha ao buscar livro: ${error.message}` });
         }
     };
     
     static async create(req, res) {
         try {
-            const newBook = await books.create(req.body);
+            const newBook = await Books.insert(req.body);
             res.status(201).json({ newBook });
-        } catch (erro) {
-            res.status(500).json({ message: `[ Error ] Falha ao cadastrar novo livro: ${erro.message}` });
+        } catch (error) {
+            res.status(500).json({ message: `[ Error ] Falha ao cadastrar novo livro: ${error.message}` });
         }
     }
 
@@ -34,17 +34,17 @@ class BooksController {
         try {
              const updatedBook = await books.findByIdAndUpdate(req.params.id, req.body);
             res.status(200).json({ updatedBook });
-        } catch (erro) {
-            res.status(500).json({ message: `[ Error ] Falha ao editar livro: ${erro.message}` });
+        } catch (error) {
+            res.status(500).json({ message: `[ Error ] Falha ao editar livro: ${error.message}` });
         }
     };
     
     static async removeBook(req, res) {
         try {
-            await books.findByIdAndDelete(req.params.id);
+            await Books.findByIdAndDelete(req.params.id);
             res.status(204).json({});
-        } catch (erro) {
-            res.status(500).json({ message: `[ Error ] Falha ao remover livro: ${erro.message}` });
+        } catch (error) {
+            res.status(500).json({ message: `[ Error ] Falha ao remover livro: ${error.message}` });
         }
     };
     
