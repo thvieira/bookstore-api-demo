@@ -1,0 +1,13 @@
+{
+  "books": [
+    {
+      "isbn": "978-1-56619-909-0",
+      "title": "Ninguém acendia as lâmpadas",
+      "author": "Felisberto Hernández",
+      "publisher": "Coragem",
+      "price": "80.00",
+      "stock": 0,
+      "id": "f7732d5d-791a-497e-a0d9-94dfbbaf3a29"
+    }
+  ]
+}
