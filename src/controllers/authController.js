@@ -1,14 +1,17 @@
+
+import Books from "../models/books.js";
+
 class AuthController {
 
-    static async authenticate(req, res) {
+    static async register(req, res) {
         console.log(req.body);
-        //const user = req.body.name
-        //const hashedPassword = await bcrypt.hash(req.body.password, 10)
+        const user = req.body.username;
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
         //users.push ({user: user, password: hashedPassword})
         //res.status(201).send(users)
     }
 
-    static async register(req, res) {
+    static async authenticate(req, res) {
         console.log(req.body);
         /*
         const user = users.find((c) => c.user == req.body.name);
