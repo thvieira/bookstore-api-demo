@@ -44,6 +44,7 @@ class Books {
                 if(bookData.publisher) book.publisher = bookData.publisher;
                 if(bookData.price) book.price = bookData.price;
                 if(bookData.stock) book.stock = bookData.stock;
+                if(bookData.img) book.img = bookData.img;
 
                 await db.write();
                 return book;

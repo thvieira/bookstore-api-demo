@@ -1,13 +1,16 @@
 {
   "books": [
     {
-      "isbn": "978-1-56619-909-0",
-      "title": "Ninguém acendia as lâmpadas",
-      "author": "Felisberto Hernández",
-      "publisher": "Coragem",
-      "price": "50.00",
-      "stock": 10,
-      "id": "f7732d5d-791a-497e-a0d9-94dfbbaf3a29"
+      "title": "Modo de apanhar pássaros à mão",
+      "price": "20",
+      "img": "https://m.media-amazon.com/images/I/81KsS+J4kmL._SY466_.jpg",
+      "id": "b3d67835-853c-47a6-94c4-e4c10ae24964"
+    },
+    {
+      "title": "A ideologia modernista",
+      "price": "90",
+      "img": "https://m.media-amazon.com/images/I/61GPIaYQobL._AC_UL320_.jpg",
+      "id": "21e67128-70cf-4a39-a170-08819d82f0e0"
     }
   ]
 }
