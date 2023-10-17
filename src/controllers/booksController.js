@@ -15,7 +15,8 @@ class BooksController {
         try {
           const id = req.params.id;
           const book = await Books.findById(id);
-          res.status(200).json(book);
+          if(!book.length) res.status(404).json({ message: `Book not found for ${id} ID.` });
+          else res.status(200).json(book);
         } catch (error) {
             res.status(500).json({ message: `[ Error ] Falha ao buscar livro: ${error.message}` });
         }
