@@ -8,9 +8,10 @@
     },
     {
       "title": "A ideologia modernista",
-      "price": "90",
+      "price": "85.00",
       "img": "https://m.media-amazon.com/images/I/61GPIaYQobL._AC_UL320_.jpg",
-      "id": "21e67128-70cf-4a39-a170-08819d82f0e0"
+      "id": "21e67128-70cf-4a39-a170-08819d82f0e0",
+      "isTranslated": false
     }
   ]
 }
