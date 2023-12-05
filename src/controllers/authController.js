@@ -4,11 +4,11 @@ import Books from "../models/books.js";
 class AuthController {
 
     static async register(req, res) {
-        console.log(req.body);
         const user = req.body.username;
-        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        const hashedPassword = req.body.password;
+        console.log(req.body);
         //users.push ({user: user, password: hashedPassword})
-        //res.status(201).send(users)
+        res.status(201).send(req.body);
     }
 
     static async authenticate(req, res) {

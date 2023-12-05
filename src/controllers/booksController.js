@@ -4,6 +4,7 @@ class BooksController {
 
     static async listAll(req, res) {
         try {
+            console.log(req.query.author); // TODO Implementar filtro de busca
             const booksList = await Books.find();
             res.status(200).json(booksList);
         } catch (error) {
