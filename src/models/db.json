@@ -2,6 +2,7 @@
   "books": [
     {
       "title": "Modo de apanhar pássaros à mão",
+      "author": "Maria Valeria Rezende",
       "price": "40.00",
       "img": "https://m.media-amazon.com/images/I/81KsS+J4kmL._SY466_.jpg",
       "id": "b3d67835-853c-47a6-94c4-e4c10ae24964",
@@ -9,6 +10,7 @@
     },
     {
       "title": "A ideologia modernista",
+      "author": "L. A. Fischer",
       "price": "85.00",
       "img": "https://m.media-amazon.com/images/I/61GPIaYQobL._AC_UL320_.jpg",
       "id": "21e67128-70cf-4a39-a170-08819d82f0e0",
@@ -88,17 +90,6 @@
       "country": "RS",
       "img": "https://m.media-amazon.com/images/I/81XpG2iKTlL._AC_UF1000,1000_QL80_.jpg",
       "id": "c95685dd-cdf4-435a-a068-cbde3cd21fed"
-    },
-    {
-      "isbn": "978-65-85243-09-0",
-      "title": "Dom Casmurro",
-      "author": "Machado de Assis",
-      "publisher": "Antofágica",
-      "price": "99.00",
-      "stock": 2,
-      "country": "RS",
-      "img": "https://m.media-amazon.com/images/I/81XpG2iKTlL._AC_UF1000,1000_QL80_.jpg",
-      "id": "600ba37e-3600-4014-8ddd-a6449b203855"
     }
   ]
 }

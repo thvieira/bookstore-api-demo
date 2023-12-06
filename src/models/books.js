@@ -25,8 +25,9 @@ class Books {
         return bookData;
     }
 
-    static async find() {
+    static async find(q) {
         await db.read();
+        if(q) db.data.books = db.data.books.filter( (book) => book.author.includes(q) || book.title.includes(q) );
         return db.data.books;
     }
 
@@ -39,12 +40,6 @@ class Books {
         await db.read();
         for(var book of db.data.books) {
             if(book.id == bookId) {
-                /*if(bookData.title) book.title = bookData.title;
-                if(bookData.author) book.author = bookData.author;
-                if(bookData.publisher) book.publisher = bookData.publisher;
-                if(bookData.price) book.price = bookData.price;
-                if(bookData.stock) book.stock = bookData.stock;
-                if(bookData.img) book.img = bookData.img;*/
 
                 book = update(book, bookData);
 
