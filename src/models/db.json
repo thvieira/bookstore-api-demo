@@ -88,6 +88,17 @@
       "country": "RS",
       "img": "https://m.media-amazon.com/images/I/81XpG2iKTlL._AC_UF1000,1000_QL80_.jpg",
       "id": "c95685dd-cdf4-435a-a068-cbde3cd21fed"
+    },
+    {
+      "isbn": "978-65-85243-09-0",
+      "title": "Dom Casmurro",
+      "author": "Machado de Assis",
+      "publisher": "Antofágica",
+      "price": "99.00",
+      "stock": 2,
+      "country": "RS",
+      "img": "https://m.media-amazon.com/images/I/81XpG2iKTlL._AC_UF1000,1000_QL80_.jpg",
+      "id": "600ba37e-3600-4014-8ddd-a6449b203855"
     }
   ]
 }
