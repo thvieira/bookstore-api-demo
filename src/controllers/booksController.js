@@ -5,6 +5,7 @@ class BooksController {
     static async listAll(req, res) {
         try {
             const booksList = await Books.find(req.query.search);
+            if(!booksList.length) return res.status(204).json();
             res.status(200).json(booksList);
         } catch (error) {
             res.status(500).json({ message: `[ Error ] Falha ao listar livros: ${error.message}` });
