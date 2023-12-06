@@ -16,6 +16,10 @@ class AuthController {
           res.status(401).send('Login inválido!');
     }
 
+    static async teapot(req, res) {
+      res.status(418).send("I'm a teapot!");
+  }
+
 }
 
 export default AuthController;
