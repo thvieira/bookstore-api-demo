@@ -16,7 +16,7 @@ class BooksController {
           const id = req.params.id;
           const book = await Books.findById(id);
           if(!book.length) res.status(404).json({ message: `Book not found for ${id} ID.` });
-          else res.status(200).json(book);
+          else res.status(200).json(book[0]);
         } catch (error) {
             res.status(500).json({ message: `[ Error ] Falha ao buscar livro: ${error.message}` });
         }
@@ -24,6 +24,8 @@ class BooksController {
     
     static async create(req, res) {
         try {
+            if(!req.body.isbn) return res.status(400).json({ message: "A book should have an ISBN." });
+            if(!req.body.title) return res.status(400).json({ message: "A book should have an title." });
             const newBook = await Books.insert(req.body);
             res.status(201).json({ newBook });
         } catch (error) {
