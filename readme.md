@@ -2,6 +2,8 @@
 
 Esta é uma API de demonstração desenvolvida para exercícios de automação de testes com Robot Framework. Foi construída utilizando JavaScript com [ExpressJS](https://expressjs.com/), persistência em memória com [LowDB](https://github.com/typicode/lowdb) e autenticação [JWT](https://jwt.io).
 
+Esta API possui dois serviços, `/auth` para autenticação e `/books` para gerenciamento de livros no catálogo da livraria.
+
 ## Subir o container diretamente do DockerHub
 
 ```sh
@@ -10,13 +12,13 @@ $ docker run -d -p 3000:3000 --name bookstore-api-demo-from-hub thvieiraid/books
 
 ## Subir container localmente
 
-First, build the Docker image: 
+Primeiramente, construa a imagem Docker: 
 
 ```sh
 $ docker build . -t="bookstore-api-demo"
 ```
 
-Then run with Docker: 
+Então execute uma instância do container Docker: 
 
 ```sh
 $ docker run -d -p 3000:3000 --name bookstore-api-demo bookstore-api-demo
