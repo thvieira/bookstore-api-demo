@@ -81,15 +81,36 @@
       "id": "fb95002e-aeb5-416a-ac1e-4e627c7bb9b1"
     },
     {
-      "isbn": "978-65-85243-09-0",
-      "title": "Dom Casmurro",
-      "author": "Machado de Assis",
-      "publisher": "Antofágica",
-      "price": 99,
-      "stock": 2,
-      "country": "RS",
-      "img": "https://m.media-amazon.com/images/I/81XpG2iKTlL._AC_UF1000,1000_QL80_.jpg",
-      "id": "c95685dd-cdf4-435a-a068-cbde3cd21fed"
+      "isbn": "978-85-359207-2-7",
+      "title": "História universal da infâmia",
+      "author": "Jorge Luis Borges",
+      "publisher": "Cia. das Letras",
+      "price": 50,
+      "stock": 10,
+      "country": "Argentina",
+      "img": "https://m.media-amazon.com/images/I/71O5WrwP04L._SL1500_.jpg",
+      "id": "e7f45d48-a853-40ba-aaf4-885accbb60bf",
+      "isTranslated": true
+    },
+    {
+      "isbn": "978-85-6028-199-2",
+      "title": "OS ESPIÕES",
+      "author": "Luis Fernando Verissimo",
+      "publisher": "Alfaguara",
+      "price": 50,
+      "stock": 500,
+      "img": "https://cdl-static.s3-sa-east-1.amazonaws.com/covers/gg/9788560281992/os-espioes.jpg",
+      "id": "9a04c15e-1c0d-4452-91da-e6d0fda623e8"
+    },
+    {
+      "isbn": "978-85-6028-199-2",
+      "title": "OS ESPIÕES",
+      "author": "Luis Fernando Verissimo",
+      "publisher": "Alfaguara",
+      "price": 50,
+      "stock": 500,
+      "img": "https://cdl-static.s3-sa-east-1.amazonaws.com/covers/gg/9788560281992/os-espioes.jpg",
+      "id": "a38e1b99-0aa4-4c7f-bcb4-8133ed436f30"
     }
   ]
 }
